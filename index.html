@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>出馆确认</title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.haeder{
+				height: 40px;
+				width: 100%;
+				background-color: #0099FF;
+				border: 1px solid #0099FF;
+			}
+			.haeder-connt{
+				height: 100%;
+				max-width: 450px;
+				margin: 0 auto;
+			}
+			.haeder-left{
+				height: 40px;
+				display: flex;
+				align-items:center;
+				float: left;
+			}
+			.haeder-left img{
+				height: 26px;
+				margin: 0 3px 0 5px;
+			}
+			.haeder-left span{
+				color: #ffffff;
+				font-size: 14px;
+			}
+			.haeder-right{
+				float: right;
+			}
+			.haeder-right img{
+				height: 37px;
+			}
+			.img{
+				width: 100%;
+				max-width: 450px;
+				margin: 0 auto;
+			}
+			.img img{
+				width: 100%;
+			}
+			.size{
+				margin: 20px auto;
+				max-width: 320px;
+			}
+			.name-info{
+				display: flex;
+				align-items:center;
+				margin-bottom: 15px;
+			}
+			.name-info img{
+				width: 40px;
+			}
+			.name-info span{
+				margin: 0 0 0 15px;
+				font-size: 20px;
+			}
+			hr{
+				height:1px;
+				border:none;
+				border-top:1px solid #E6E6E6;
+				margin-bottom: 10px;
+			}
+			.tip{
+				margin-bottom: 40px;
+			}
+			.tip center{
+				font-size: 20px;
+				font-weight: 600;
+			}
+			p{
+			    font-size: 15px;
+			}
+			.p1{
+				margin: 5px 0 20px 0;
+			}
+			.p2{
+				margin: 0 0 10px 0;
+			}
+			button{
+				height: 50px;
+				width: 320px;
+				margin: 0 auto;
+				background-color: #F08F40;
+				color: #ffffff;
+				border-radius: 5px;
+				border: none;
+				font-size: 18px;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 导航 -->
+		<div class="haeder">
+			<div class="haeder-connt">
+				<div class="haeder-left">
+					<img src="img/1.png" >
+					<span>出馆确认</span>
+				</div>
+				<div class="haeder-right">
+					<img src="img/2.png" >
+				</div>
+			</div>
+		</div>
+		<!-- 图 -->
+		<div class="img">
+			<img src="img/heard-img.png" >
+		</div>
+		
+		<div class="size">
+			<!-- 名字 -->
+			<div class="name-info">
+				<img src="img/3.png" >
+				<span id="name" onclick="name()">张三</span>
+			</div>
+			<hr >
+			<!-- 通知 -->
+			<div class="tip">
+				<center>入馆成功</center>
+				<p id="date" onclick="date()" class="p1">入馆时间：2020-09-06 09:15:33</p>
+				<p class="p2">今日剩余可入馆人数1人</p>
+				<p>开馆时间为 9:00-17:00 (每周五闭馆)请在规定的时间段内入馆。注意事项：每位家长仅限携带两位儿童入馆；10岁以下儿童需监护人全程陪同。入馆请扫健康码、入馆码、测体温、带口罩。咨询热线0791-885089520</p>
+			</div>
+			<!-- 按钮 -->
+			<button type="button">确认出馆</button>
+		</div>
+		
+		<script type="text/javascript" charset="utf-8">
+		    alert("你好，本项目仅用作学习交流使用，切勿用于违法违纪活动！");
+		    function name(){
+		        var myname=prompt("请输入你的名字","张三");
+		        document.getElementById('name').innerHTML=myname;
+		    }
+		    function date(){
+		        var mydate=prompt("请输入日期","2020-09-09");
+		        var mytime=prompt("请输入时间","09:15:33");
+		        document.getElementById('date').innerHTML="入馆时间："+mydate+" "+mytime;
+		    }
+		</script>
+	</body>
+</html>
